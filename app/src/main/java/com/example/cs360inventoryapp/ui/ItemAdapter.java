@@ -1,5 +1,7 @@
-package com.example.cs360inventoryapp;
+package com.example.cs360inventoryapp.ui;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,9 +11,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.lifecycle.LiveData;
 import androidx.navigation.NavController;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.cs360inventoryapp.R;
+import com.example.cs360inventoryapp.data.Item;
+
 import java.util.List;
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
@@ -36,7 +41,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         Item item = itemList.get(position);
         holder.itemName.setText(item.getName());
         holder.itemDescription.setText(item.getDescription());
-        holder.itemImage.setImageResource(item.getImage());
+        byte[] blob = item.getImage();
+        Bitmap bmp = BitmapFactory.decodeByteArray(blob, 0, blob.length);
+        holder.itemImage.setImageBitmap(bmp);
 
         holder.detailsButton.setOnClickListener(v -> {
             navController.navigate(R.id.action_homeFragment_to_itemDetails);

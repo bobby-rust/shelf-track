@@ -1,4 +1,4 @@
-package com.example.cs360inventoryapp;
+package com.example.cs360inventoryapp.fragments;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,15 +10,17 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.cs360inventoryapp.data.Item;
+import com.example.cs360inventoryapp.ui.ItemAdapter;
+import com.example.cs360inventoryapp.R;
+import com.example.cs360inventoryapp.viewmodel.SharedViewModel;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.List;
@@ -114,7 +116,7 @@ public class AddItemFragment extends Fragment {
 
             if (itemName.length() > 0 && itemDescription.length() > 0) {
                 // TODO: allow actual image selection
-                Item item = new Item(itemName, itemDescription, R.drawable.apple);
+                Item item = new Item(itemName, itemDescription, 99, 1);
                 sharedViewModel.addItem(item);
 
                 NavController navController = Navigation.findNavController(view);

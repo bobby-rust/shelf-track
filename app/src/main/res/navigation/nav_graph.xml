@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.cs360inventoryapp.HomeFragment"
+        android:name="com.example.cs360inventoryapp.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.cs360inventoryapp.LoginFragment"
+        android:name="com.example.cs360inventoryapp.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/itemDetails"
-        android:name="com.example.cs360inventoryapp.ItemDetailsFragment"
+        android:name="com.example.cs360inventoryapp.fragments.ItemDetailsFragment"
         android:label="fragment_item_details"
         tools:layout="@layout/fragment_item_details" >
         <action
@@ -44,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/signupFragment"
-        android:name="com.example.cs360inventoryapp.SignupFragment"
+        android:name="com.example.cs360inventoryapp.fragments.SignupFragment"
         android:label="fragment_signup"
         tools:layout="@layout/fragment_signup" >
         <action
@@ -56,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/addItemFragment"
-        android:name="com.example.cs360inventoryapp.AddItemFragment"
+        android:name="com.example.cs360inventoryapp.fragments.AddItemFragment"
         android:label="fragment_add_item"
         tools:layout="@layout/fragment_add_item" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.cs360inventoryapp;
+package com.example.cs360inventoryapp.fragments;
 
 import android.os.Bundle;
 
@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.cs360inventoryapp.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 /**
